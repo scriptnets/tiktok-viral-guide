@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIKTOK DOMINATION | L'Encyclopédie de la Viralité</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chosen Palette: Carbon, Titanium & Cyber Gold -->
+    <!-- Application Structure Plan:
+         1. L'Atlas de l'Attention : Comprendre la psychologie profonde et les hormones.
+         2. L'Accélérateur de Particules (Algo) : Simulation mathématique de la viralité.
+         3. Le Laboratoire de Contenu : Déconstruction technique d'une vidéo et builder de scripts.
+         4. Le Plan de Conquête (30 Jours) : Roadmap granulaire avec check-lists.
+         5. L'Économie de l'Attention : Calculateur de ROI et stratégies de monétisation.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;900&display=swap');
+        
+        :root {
+            --gold: #FFD700;
+            --carbon: #0D0D0D;
+            --titanium: #1A1A1A;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--carbon);
+            color: #F2F2F2;
+            overflow-x: hidden;
+        }
+
+        .gold-glow {
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .glass-panel:hover {
+            border-color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .step-pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        .step-pill.active {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+            border-left: 4px solid var(--gold);
+        }
+
+        input[type=range] {
+            accent-color: var(--gold);
+        }
+
+        .animate-pulse-slow {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- HEADER & NAV -->
+    <header class="fixed w-full z-50 px-6 py-4">
+        <nav class="max-w-7xl mx-auto glass-panel px-8 py-4 flex items-center justify-between border-white/10">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-yellow-400 rounded-full animate-pulse-slow"></div>
+                <span class="text-xl font-black tracking-tighter uppercase italic">Dominion <span class="text-yellow-400">Mastery</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-400">
+                <a href="#atlas" class="nav-link hover:text-white">Atlas</a>
+                <a href="#accelerateur" class="nav-link hover:text-white">Algorithme</a>
+                <a href="#labo" class="nav-link hover:text-white">Laboratoire</a>
+                <a href="#plan" class="nav-link hover:text-white">Roadmap</a>
+            </div>
+            <button class="bg-yellow-400 text-black px-5 py-2 rounded-full font-black text-xs hover:scale-105 transition">ACCÈS PRIVÉ</button>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+        <div class="absolute top-0 w-full h-[80vh] bg-gradient-to-b from-yellow-500/10 to-transparent pointer-events-none"></div>
+        <span class="inline-block px-4 py-1 border border-yellow-500/30 text-yellow-400 rounded-full text-[10px] font-black tracking-[0.3em] uppercase mb-8">Intelligence Artificielle & Viralité</span>
+        <h1 class="text-6xl md:text-9xl font-black tracking-tighter mb-8 leading-none">
+            ENGINEER <br><span class="text-yellow-400 gold-glow italic">VICTORY.</span>
+        </h1>
+        <p class="max-w-2xl text-stone-400 text-lg md:text-xl font-light leading-relaxed mb-12">
+            Bienvenue dans le centre de commandement. Ici, nous ne "postons" pas. Nous déployons des actifs numériques conçus pour pirater l'attention humaine.
+        </p>
+        <div class="flex gap-4">
+            <a href="#accelerateur" class="bg-white text-black px-10 py-4 rounded-full font-black text-sm">EXPLORER L'ALGO</a>
+            <a href="#labo" class="border border-white/20 px-10 py-4 rounded-full font-black text-sm hover:bg-white/5 transition">VOIR LE LABO</a>
+        </div>
+    </section>
+
+    <!-- SECTION 01: L'ATLAS DE L'ATTENTION -->
+    <section id="atlas" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="grid lg:grid-cols-2 gap-20">
+            <div class="space-y-10">
+                <div>
+                    <h2 class="text-4xl font-black mb-6 uppercase tracking-tighter italic">L'Atlas de <span class="text-yellow-400">l'Attention</span></h2>
+                    <p class="text-stone-500 leading-relaxed">
+                        Le cerveau humain est câblé pour la survie, pas pour TikTok. Pour devenir viral, vous devez activer trois leviers hormonaux spécifiques via votre contenu.
+                    </p>
+                </div>
+                
+                <div class="grid gap-6">
+                    <div class="glass-panel p-6 border-l-4 border-l-blue-500">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="text-2xl">🧪</span>
+                            <h4 class="font-bold text-blue-400 uppercase tracking-widest text-sm">Dopamine (Le Hook)</h4>
+                        </div>
+                        <p class="text-xs text-stone-400 leading-relaxed">Générée par la nouveauté et l'anticipation. Votre hook doit promettre une récompense immédiate à l'utilisateur.</p>
+                    </div>
+                    <div class="glass-panel p-6 border-l-4 border-l-red-500">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="text-2xl">💉</span>
+                            <h4 class="font-bold text-red-400 uppercase tracking-widest text-sm">Cortisol (La Tension)</h4>
+                        </div>
+                        <p class="text-xs text-stone-400 leading-relaxed">Le stress de rater une information capitale. Utilisez des phrases comme "L'erreur fatale" ou "Ne faites plus ça".</p>
+                    </div>
+                    <div class="glass-panel p-6 border-l-4 border-l-yellow-500">
+                        <div class="flex items-center gap-4 mb-3">
+                            <span class="text-2xl">✨</span>
+                            <h4 class="font-bold text-yellow-400 uppercase tracking-widest text-sm">Ocytocine (Le Trust)</h4>
+                        </div>
+                        <p class="text-xs text-stone-400 leading-relaxed">La connexion avec le créateur. Le storytelling personnel transforme une vue anonyme en un abonné fidèle.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-center gap-8">
+                <div class="glass-panel p-8">
+                    <h3 class="font-bold text-center mb-6 uppercase text-xs tracking-widest">Répartition des Forces de Contenu</h3>
+                    <div class="chart-container">
+                        <canvas id="atlasChart"></canvas>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-panel p-6 text-center">
+                        <span class="block text-2xl font-black text-white">400ms</span>
+                        <span class="text-[10px] text-stone-500 uppercase">Reconnaissance de l'IA</span>
+                    </div>
+                    <div class="glass-panel p-6 text-center">
+                        <span class="block text-2xl font-black text-white">70%</span>
+                        <span class="text-[10px] text-stone-500 uppercase">Taux de Rétention Vital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 02: L'ACCÉLÉRATEUR (ALGO) -->
+    <section id="accelerateur" class="bg-stone-900/30 py-32 px-6 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <div class="lg:w-1/3">
+                    <h2 class="text-4xl font-black mb-6 uppercase italic">L'Accélérateur de <span class="text-yellow-400">Particules</span></h2>
+                    <p class="text-stone-500 text-sm leading-relaxed mb-8">
+                        L'algorithme de TikTok est une boucle de feedback mathématique. Il ne "choisit" pas vos vidéos ; il réagit à des signaux de performance. Simulez votre succès ci-contre.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <span class="block text-yellow-400 font-bold text-xs uppercase mb-1">Phase 1 : Le Sandbox</span>
+                            <p class="text-[11px] text-stone-500">Test sur 200 personnes. Si le watchtime est < 15%, la vidéo meurt ici.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <span class="block text-yellow-400 font-bold text-xs uppercase mb-1">Phase 2 : L'Écho</span>
+                            <p class="text-[11px] text-stone-500">Diffusion sur 5 000 - 50 000 personnes. Les partages deviennent le driver #1.</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-lg border border-white/10">
+                            <span class="block text-yellow-400 font-bold text-xs uppercase mb-1">Phase 3 : La Stratosphère</span>
+                            <p class="text-[11px] text-stone-500">Accès au million. Le contenu est exporté vers d'autres plateformes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-2/3 glass-panel p-10">
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <div>
+                                <label class="flex justify-between text-[10px] uppercase font-black text-stone-400 mb-4">
+                                    Watchtime Moyen (sec)
+                                    <span id="vWatch" class="text-yellow-400">10s</span>
+                                </label>
+                                <input type="range" id="iWatch" min="1" max="60" value="10" class="w-full">
+                            </div>
+                            <div>
+                                <label class="flex justify-between text-[10px] uppercase font-black text-stone-400 mb-4">
+                                    Intensité des Partages (%)
+                                    <span id="vShare" class="text-yellow-400">1%</span>
+                                </label>
+                                <input type="range" id="iShare" min="0" max="15" step="0.5" value="1" class="w-full">
+                            </div>
+                            <div class="pt-6 border-t border-white/10">
+                                <span class="text-[10px] text-stone-500 uppercase">Potentiel de Diffusion :</span>
+                                <div id="vReach" class="text-3xl font-black text-white mt-2 italic tracking-tighter">5 000 VUES</div>
+                                <div class="w-full h-1 bg-stone-800 rounded-full mt-4 overflow-hidden">
+                                    <div id="vBar" class="h-full bg-yellow-400 w-1/4 transition-all duration-700"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="algoChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 03: LE LABORATOIRE (CONTENT) -->
+    <section id="labo" class="max-w-7xl mx-auto px-6 py-32">
+        <div class="text-center mb-20">
+            <h2 class="text-5xl font-black uppercase italic italic">Le Laboratoire de <span class="text-yellow-400">Création</span></h2>
+            <p class="text-stone-500 mt-4">Déconstruisez la structure moléculaire d'un "Banger".</p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8">
+            <!-- Selector -->
+            <div class="lg:col-span-4 space-y-4">
+                <div onclick="setLabStage('hook')" class="lab-btn step-pill active" id="btn-hook">
+                    <h4 class="font-bold text-white uppercase text-sm">Le Hook Magnétique</h4>
+                    <p class="text-[11px] text-stone-500">Capturer l'attention en < 2 secondes.</p>
+                </div>
+                <div onclick="setLabStage('tension')" class="lab-btn step-pill" id="btn-tension">
+                    <h4 class="font-bold text-white uppercase text-sm">La Montée de Tension</h4>
+                    <p class="text-[11px] text-stone-500">Engager le cerveau dans une boucle logique.</p>
+                </div>
+                <div onclick="setLabStage('reward')" class="lab-btn step-pill" id="btn-reward">
+                    <h4 class="font-bold text-white uppercase text-sm">La Récompense (Value)</h4>
+                    <p class="text-[11px] text-stone-500">Délivrer la promesse initiale brutalement.</p>
+                </div>
+                <div onclick="setLabStage('loop')" class="lab-btn step-pill" id="btn-loop">
+                    <h4 class="font-bold text-white uppercase text-sm">La Boucle de CTA</h4>
+                    <p class="text-[11px] text-stone-500">Convertir la dopamine en action.</p>
+                </div>
+            </div>
+
+            <!-- Content Display -->
+            <div class="lg:col-span-8 glass-panel p-10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-4 opacity-10 text-8xl font-black italic">STAGE</div>
+                <div id="labDisplay">
+                    <h3 class="text-3xl font-black gold-glow mb-6 italic uppercase" id="labTitle">Sélectionnez un Module</h3>
+                    <p class="text-stone-400 leading-relaxed mb-10" id="labDesc">Explorez les méthodes d'ingénierie sociale pour chaque segment de vidéo.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6" id="labTemplates">
+                        <!-- Templates load here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04: ROADMAP (30 JOURS) -->
+    <section id="plan" class="bg-stone-950 py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-10 mb-20">
+                <div>
+                    <h2 class="text-5xl font-black uppercase italic">Le Plan de <span class="text-yellow-400">Conquête</span></h2>
+                    <p class="text-stone-500 mt-2">Passez de 0 à l'autorité totale en 4 cycles de 7 jours.</p>
+                </div>
+                <div class="flex bg-white/5 p-1 rounded-full border border-white/10">
+                    <button onclick="setWeek(1)" class="week-btn px-6 py-2 rounded-full text-xs font-black bg-yellow-400 text-black">W1</button>
+                    <button onclick="setWeek(2)" class="week-btn px-6 py-2 rounded-full text-xs font-black">W2</button>
+                    <button onclick="setWeek(3)" class="week-btn px-6 py-2 rounded-full text-xs font-black">W3</button>
+                    <button onclick="setWeek(4)" class="week-btn px-6 py-2 rounded-full text-xs font-black">W4</button>
+                </div>
+            </div>
+
+            <div id="weekContent" class="grid md:grid-cols-3 gap-8">
+                <!-- Content via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05: MONETISATION CALCULATOR -->
+    <section class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-5xl font-black mb-16 uppercase italic">L'Économie du <span class="text-yellow-400">Profit</span></h2>
+        <div class="glass-panel p-12 text-left">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-stone-500 mb-2">Volume de Vues Mensuelles</label>
+                        <input type="number" id="calcViews" value="500000" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-white outline-none focus:border-yellow-400">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase text-stone-500 mb-2">Stratégie Dominante</label>
+                        <select id="calcStrategy" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl text-white outline-none focus:border-yellow-400 appearance-none">
+                            <option value="1">Produit Digital (Ebook/Formation)</option>
+                            <option value="0.3">Affiliation High-Ticket</option>
+                            <option value="0.05">Fonds Créateur (Vues pures)</option>
+                        </select>
+                    </div>
+                    <button onclick="computeROI()" class="w-full py-4 bg-yellow-400 text-black font-black uppercase tracking-widest rounded-xl">Calculer le Cashflow</button>
+                </div>
+                <div class="text-center p-8 bg-black/40 rounded-2xl border border-white/5">
+                    <span class="text-[10px] uppercase text-stone-500 font-black">Estimation Mensuelle</span>
+                    <div id="roiResult" class="text-5xl font-black text-green-400 mt-4 tracking-tighter">5 000 €</div>
+                    <p class="text-[10px] text-stone-600 mt-6 leading-relaxed uppercase">Basé sur un taux de conversion conservateur de 0.05% sur audience qualifiée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-yellow-400 text-3xl mb-8">★ ★ ★ ★ ★</div>
+            <p class="text-stone-500 text-sm max-w-xl mx-auto mb-12">
+                "La viralité n'est pas un don du ciel, c'est le résultat d'une exécution froide et méthodique."
+            </p>
+            <div class="text-[10px] uppercase tracking-[0.5em] text-stone-700">Propriété de Dominion Strategy © 2026</div>
+        </div>
+    </footer>
+
+    <script>
+        // --- DATA VISUALIZATION ---
+
+        // Atlas Chart (Radar)
+        const ctxAtlas = document.getElementById('atlasChart').getContext('2d');
+        new Chart(ctxAtlas, {
+            type: 'radar',
+            data: {
+                labels: ['DOPAMINE', 'TRUST', 'SEO', 'LOOP', 'STORY', 'VISUEL'],
+                datasets: [{
+                    label: 'Profil Viral',
+                    data: [100, 85, 95, 90, 80, 75],
+                    backgroundColor: 'rgba(255, 215, 0, 0.2)',
+                    borderColor: '#FFD700',
+                    pointBackgroundColor: '#FFD700',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    r: {
+                        angleLines: { color: 'rgba(255,255,255,0.05)' },
+                        grid: { color: 'rgba(255,255,255,0.05)' },
+                        pointLabels: { color: '#888', font: { size: 10, weight: '900' } },
+                        ticks: { display: false, stepSize: 20 }
+                    }
+                },
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // Algo Chart (Line)
+        const ctxAlgo = document.getElementById('algoChart').getContext('2d');
+        let algoLine = new Chart(ctxAlgo, {
+            type: 'line',
+            data: {
+                labels: ['T+0', 'T+1h', 'T+6h', 'T+12h', 'T+24h'],
+                datasets: [{
+                    label: 'Vues',
+                    data: [100, 500, 2000, 5000, 8000],
+                    borderColor: '#FFD700',
+                    tension: 0.4,
+                    pointRadius: 0,
+                    borderWidth: 3,
+                    fill: true,
+                    backgroundColor: 'rgba(255, 215, 0, 0.05)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { display: false },
+                    x: { grid: { display: false }, ticks: { color: '#444', font: { size: 8 } } }
+                },
+                plugins: { legend: { display: false } }
+            }
+        });
+
+        // --- INTERACTIVE LOGIC ---
+
+        // Simulator
+        const iWatch = document.getElementById('iWatch');
+        const iShare = document.getElementById('iShare');
+        const vWatch = document.getElementById('vWatch');
+        const vShare = document.getElementById('vShare');
+        const vReach = document.getElementById('vReach');
+        const vBar = document.getElementById('vBar');
+
+        function updateAlgo() {
+            const w = parseInt(iWatch.value);
+            const s = parseFloat(iShare.value);
+            vWatch.innerText = w + 's';
+            vShare.innerText = s + '%';
+
+            let views = 0;
+            let data = [];
+            let color = "#FFD700";
+
+            if (w < 5) {
+                views = 250;
+                data = [100, 150, 200, 240, 250];
+                vReach.innerText = "STAGNATION (250)";
+                vBar.style.width = "10%";
+            } else if (w < 20 || s < 2) {
+                views = 15000;
+                data = [100, 1000, 5000, 12000, 15000];
+                vReach.innerText = "EXPLORATION (15K)";
+                vBar.style.width = "40%";
+            } else {
+                views = 1200000;
+                data = [1000, 50000, 250000, 800000, 1200000];
+                vReach.innerText = "VIRALITÉ (1.2M)";
+                vBar.style.width = "100%";
+            }
+
+            algoLine.data.datasets[0].data = data;
+            algoLine.update();
+        }
+
+        iWatch.addEventListener('input', updateAlgo);
+        iShare.addEventListener('input', updateAlgo);
+
+        // Lab Stage Manager
+        const stages = {
+            hook: {
+                title: "Hook Magnétique",
+                desc: "Votre vidéo commence ici. Si l'utilisateur scrolle, vous avez perdu. Le hook doit être une gifle visuelle ou mentale.",
+                templates: [
+                    { t: "L'Aversion à la Perte", d: "Arrête de faire ça si tu ne veux pas perdre [X]..." },
+                    { t: "Le Secret Volé", d: "Ce que les banques ne veulent pas que tu saches..." },
+                    { t: "Le Résultat Brut", d: "Comment j'ai généré [X] en 24h avec cet outil." },
+                    { t: "Le Contre-Courant", d: "Tout ce que tu sais sur [Sujet] est faux." }
+                ]
+            },
+            tension: {
+                title: "Montée de Tension",
+                desc: "Maintenant qu'ils écoutent, vous devez justifier leur attention. Créez un vide informationnel.",
+                templates: [
+                    { t: "Le Problème Caché", d: "Le vrai problème, ce n'est pas [A], c'est [B]." },
+                    { t: "La Preuve Sociale", d: "J'ai montré ça à 10 experts et ils étaient choqués." },
+                    { t: "Le Storytelling Flash", d: "Il y a 3 mois, j'étais exactement à ta place." }
+                ]
+            },
+            reward: {
+                title: "Récompense (Value)",
+                desc: "Soyez généreux. Donnez l'information gratuitement et rapidement. Pas de remplissage.",
+                templates: [
+                    { t: "Le Tuto Accéléré", d: "Étape 1, fais ça. Étape 2, fais ça." },
+                    { t: "L'Outil Magique", d: "Va sur ce site, clique ici et voilà le résultat." },
+                    { t: "La Pépite Gratuite", d: "Voici le PDF complet, prends un screenshot." }
+                ]
+            },
+            loop: {
+                title: "La Boucle de CTA",
+                desc: "Ne quémandez pas. Donnez une raison logique de s'abonner pour la suite de l'histoire.",
+                templates: [
+                    { t: "Le Bridge Partie 2", d: "Demain, je montre comment automatiser ça. Abonne-toi." },
+                    { t: "Le Commentaire Appât", d: "Dis 'GO' en commentaire et je t'envoie la liste." },
+                    { t: "Le Profil Aimant", d: "Toutes les pépites sont dans ma bio. Clique." }
+                ]
+            }
+        };
+
+        function setLabStage(id) {
+            const stage = stages[id];
+            document.getElementById('labTitle').innerText = stage.title;
+            document.getElementById('labDesc').innerText = stage.desc;
+            
+            const grid = document.getElementById('labTemplates');
+            grid.innerHTML = '';
+            stage.templates.forEach(tmp => {
+                grid.innerHTML += `
+                    <div class="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-yellow-400/50 transition cursor-default">
+                        <h5 class="text-xs font-black text-yellow-400 uppercase mb-2">${tmp.t}</h5>
+                        <p class="text-xs text-stone-400 italic">"${tmp.d}"</p>
+                    </div>
+                `;
+            });
+
+            document.querySelectorAll('.lab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + id).classList.add('active');
+        }
+
+        // Roadmap Manager
+        const weeks = {
+            1: [
+                { d: "Analyse & Setup", c: "Configurez un compte 'Creator'. Analysez 10 concurrents. Identifiez les 3 hooks qui reviennent." },
+                { d: "Tests de Volume", c: "Postez 1 vidéo par jour. Ne cherchez pas la qualité, cherchez à comprendre ce qui retient l'audience." },
+                { d: "Nettoyage SEO", c: "Optimisez votre Bio avec les mots-clés de votre niche. Photo de profil à fort contraste." }
+            ],
+            2: [
+                { d: "Identification de Niche", c: "Analysez vos 7 premières vidéos. Laquelle a le meilleur taux de complétion ? C'est votre niche." },
+                { d: "Maîtrise du Montage", c: "Ajoutez des sous-titres dynamiques et des zooms toutes les 3 secondes pour casser la monotonie." },
+                { d: "L'Appel à l'Action", c: "Commencez à tester des CTA de commentaires pour booster l'engagement artificiellement." }
+            ],
+            3: [
+                { d: "Scaling Horizontal", c: "Passez à 2 ou 3 vidéos par jour. Utilisez des 'Remakes' de vos propres succès de la W1." },
+                { d: "Série d'Autorité", c: "Lancez une série 'Jour X sur 30 pour réussir...'. Les gens adorent suivre une progression." },
+                { d: "Collaboration IA", c: "Utilisez ChatGPT pour générer 50 variations de hooks basés sur vos meilleures accroches." }
+            ],
+            4: [
+                { d: "Tunnel de Conversion", c: "Mettez en place votre produit digital ou lien affilié. Chaque vidéo doit pointer vers la bio." },
+                { d: "Optimisation du Profit", c: "Analysez quelles vidéos génèrent le plus de clics (pas forcément le plus de vues)." },
+                { d: "Automatisation", c: "Préparez votre contenu pour le mois prochain. Vous êtes maintenant un média, plus un simple créateur." }
+            ]
+        };
+
+        function setWeek(w) {
+            const content = document.getElementById('weekContent');
+            content.innerHTML = '';
+            weeks[w].forEach(item => {
+                content.innerHTML += `
+                    <div class="glass-panel p-8 border-t-2 border-t-yellow-400">
+                        <h4 class="text-lg font-black text-white mb-4 italic">${item.d}</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">${item.c}</p>
+                    </div>
+                `;
+            });
+
+            document.querySelectorAll('.week-btn').forEach(btn => {
+                btn.classList.remove('bg-yellow-400', 'text-black');
+            });
+            event.currentTarget.classList.add('bg-yellow-400', 'text-black');
+        }
+
+        // ROI Calculator
+        function computeROI() {
+            const views = parseInt(document.getElementById('calcViews').value);
+            const strat = parseFloat(document.getElementById('calcStrategy').value);
+            const result = document.getElementById('roiResult');
+            
+            // Logique : Views * Conv Rate (0.05%) * Basket Moyen (dépend de la strat)
+            // Digital: 50€ | Affiliate: 30€ | Fund: 0.5€ per 1000
+            let basket = 50;
+            if (strat < 1) basket = 30;
+            if (strat < 0.1) basket = 0.5;
+
+            let money = 0;
+            if (strat < 0.1) {
+                money = (views / 1000) * basket;
+            } else {
+                money = (views * 0.0005) * basket * strat;
+            }
+
+            result.innerText = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(money);
+        }
+
+        // Init
+        updateAlgo();
+        setLabStage('hook');
+        setWeek(1);
+        computeROI();
+
+    </script>
+</body>
+</html>
